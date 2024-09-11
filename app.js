@@ -96,6 +96,7 @@ const lapTime = `${padTime(minutes)}: ${padTime(seconds)}: ${padTime(millisecond
 
 	const listItem = document.createElement('li');
 
+//counting the child element and laptime.
 		listItem.innerHTML = `<span> Lap: ${lapList.childElementCount+1} : </span>${lapTime}`;
 
 		lapList.appendChild(listItem);

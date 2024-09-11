@@ -25,7 +25,7 @@ resetButton.addEventListener('click',resetTimer);
 function startTimer() {
 	//code
 
-	interval = setInterval(updateTimer,10);
+	interval = setInterval(updateTimer,10); //in 10 milliseconds , updateTimer function will execute repeatedily.
 	startButton.disabled= true;
 	pauseButton.disabled= false;
 	resetButton.disabled=false;
@@ -92,10 +92,11 @@ function padTime(time) {
 
 function addLapList() {
 const lapTime = `${padTime(minutes)}: ${padTime(seconds)}: ${padTime(milliseconds)}`;
+// 
 
 	const listItem = document.createElement('li');
 
-		listItem.innerHTML = `<span> Lap: ${lapList.childElementCount+1}: </span> ${lapTime}`;
+		listItem.innerHTML = `<span> Lap: ${lapList.childElementCount+1} : </span>${lapTime}`;
 
 		lapList.appendChild(listItem);
 	}
